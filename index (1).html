@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>탕정중 기술 게임장</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700;900&family=Jua&display=swap" rel="stylesheet">
+<style>
+:root{--f:"Noto Sans KR","Noto Sans CJK KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;min-height:100%;font-family:var(--f);font-weight:500;color:#1f2a4a}
+body{background:linear-gradient(160deg,#fff6d9 0%,#e3f6ff 45%,#e9e3ff 100%);background-attachment:fixed;padding:calc(env(safe-area-inset-top) + 22px) 14px 40px}
+.wrap{max-width:520px;margin:0 auto}
+.hd{text-align:center;margin-bottom:18px}
+.hd .sch{display:inline-block;font-weight:900;font-size:13px;letter-spacing:1px;color:#fff;background:#1f2a4a;border-radius:999px;padding:4px 12px}
+.hd h1{margin:10px 0 4px;font-weight:900;font-size:34px;letter-spacing:-.5px;line-height:1.15}
+.hd h1 span{background:linear-gradient(90deg,#ff7a3d,#8e5bff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hd p{margin:0;color:#5a6690;font-weight:700;font-size:14.5px}
+.game{position:relative;display:block;text-decoration:none;color:inherit;border-radius:26px;overflow:hidden;margin-top:16px;box-shadow:0 8px 0 rgba(31,42,74,.12),0 14px 30px rgba(31,42,74,.12);transition:transform .15s}
+.game:active{transform:translateY(4px) scale(.99)}
+.art{position:relative;height:150px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.art svg{height:128px;width:auto;position:relative}
+.cow .art{background:linear-gradient(#5ec3ff,#c9efff 62%,#7ad35a 62%,#62c140)}
+.vo .art{background:radial-gradient(circle at 50% 0,#3c4a92,#1a2247 70%)}
+.tag{position:absolute;left:12px;top:12px;font-weight:900;font-size:12px;color:#fff;background:rgba(0,0,0,.35);border-radius:999px;padding:3px 10px;backdrop-filter:blur(4px)}
+.body{background:#fff;padding:14px 16px 16px}
+.row{display:flex;align-items:center;gap:10px}
+.body h2{margin:0;font-weight:900;font-size:24px;flex:1}
+.cow h2{font-family:"Jua",var(--f);font-weight:400;font-size:27px;color:#e2701c}
+.vo h2 span{color:#8e5bff}
+.go{font-weight:900;font-size:15px;color:#fff;border-radius:999px;padding:9px 16px;white-space:nowrap}
+.cow .go{background:linear-gradient(#8ee84f,#3fb81e);box-shadow:0 3px 0 #2a8a10}
+.vo .go{background:linear-gradient(#8e7bff,#5b3fd6);box-shadow:0 3px 0 #3a2296}
+.desc{margin:6px 0 10px;font-size:14px;font-weight:700;color:#5a6690;line-height:1.5}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips span{font-size:12px;font-weight:900;border-radius:999px;padding:3px 9px;background:#f0f2fa;color:#5a6690}
+.top{display:flex;align-items:center;gap:8px;margin-top:12px;padding:8px 12px;border-radius:14px;background:#fff8dc;border:2px solid #ffe08a;font-size:13.5px;font-weight:700;color:#7a5200}
+.top b{font-weight:900;color:#3a2a00}
+.top .medal{width:22px;height:22px;flex:none}
+.top a{margin-left:auto;font-weight:900;color:#b06a00;text-decoration:underline;text-underline-offset:3px;white-space:nowrap}
+.foot{text-align:center;margin-top:24px;font-size:12.5px;color:#8a93b8;font-weight:700}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hd">
+    <span class="sch">탕정중학교 기술</span>
+    <h1>기술 시간 <span>게임장</span></h1>
+    <p>생명 기술 단원으로 만든 게임이에요. 하고 싶은 게임을 고르세요!</p>
+  </div>
+
+  <a class="game cow" href="cowrun/">
+    <div class="art">
+      <span class="tag">달리기 · 순발력</span>
+      <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+        <g opacity=".85" stroke="#fff" stroke-width="5" stroke-linecap="round"><path d="M18 62h34M8 82h40M22 102h28"/></g>
+        <ellipse cx="112" cy="128" rx="58" ry="8" fill="rgba(0,0,0,.18)"/>
+        <!-- legs -->
+        <g stroke="#7a4a20" stroke-width="3">
+          <rect x="74" y="92" width="14" height="32" rx="7" fill="#d79a52" transform="rotate(28 81 92)"/>
+          <rect x="134" y="92" width="14" height="32" rx="7" fill="#d79a52" transform="rotate(-24 141 92)"/>
+          <rect x="92" y="96" width="14" height="30" rx="7" fill="#e5ae6a" transform="rotate(-18 99 96)"/>
+          <rect x="120" y="96" width="14" height="30" rx="7" fill="#e5ae6a" transform="rotate(20 127 96)"/>
+        </g>
+        <!-- body -->
+        <ellipse cx="110" cy="82" rx="50" ry="30" fill="#e0a660" stroke="#7a4a20" stroke-width="3.5"/>
+        <path d="M66 80 Q48 74 44 60" fill="none" stroke="#7a4a20" stroke-width="4" stroke-linecap="round"/>
+        <ellipse cx="43" cy="57" rx="5" ry="7" fill="#5a3418"/>
+        <!-- scarf tail -->
+        <path d="M140 66 Q120 50 96 58 Q112 66 106 76 Q124 66 140 72Z" fill="#e8402f" stroke="#a81818" stroke-width="2.5" stroke-linejoin="round"/>
+        <!-- head -->
+        <path d="M150 44 Q138 26 146 14 Q156 30 160 40Z" fill="#fff4d8" stroke="#a88a4e" stroke-width="2.5"/>
+        <path d="M176 42 Q188 26 184 12 Q172 26 168 38Z" fill="#fff4d8" stroke="#a88a4e" stroke-width="2.5"/>
+        <ellipse cx="164" cy="60" rx="26" ry="24" fill="#e0a660" stroke="#7a4a20" stroke-width="3.5"/>
+        <path d="M138 52 Q126 46 124 56 Q132 62 140 60Z" fill="#d79a52" stroke="#7a4a20" stroke-width="2.5"/>
+        <ellipse cx="170" cy="72" rx="18" ry="12" fill="#f8e2c8" stroke="#c0855a" stroke-width="2.5"/>
+        <circle cx="164" cy="71" r="2.4" fill="#7a4a30"/><circle cx="176" cy="71" r="2.4" fill="#7a4a30"/>
+        <ellipse cx="158" cy="54" rx="5.5" ry="6.5" fill="#fff" stroke="#3a2010" stroke-width="2"/><circle cx="160" cy="55" r="3" fill="#2b1b12"/>
+        <ellipse cx="174" cy="54" rx="5.5" ry="6.5" fill="#fff" stroke="#3a2010" stroke-width="2"/><circle cx="176" cy="55" r="3" fill="#2b1b12"/>
+        <path d="M150 45 L163 49 M184 45 L172 49" stroke="#5a3418" stroke-width="3" stroke-linecap="round"/>
+        <path d="M140 82 Q164 96 186 80 L184 90 Q164 104 142 92Z" fill="#e8402f" stroke="#a81818" stroke-width="2.5" stroke-linejoin="round"/>
+        <path d="M190 40 q6 8 0 12 q-6 -4 0 -12z" fill="#8fd4ff" stroke="#3a7ab0" stroke-width="1.5"/>
+      </svg>
+    </div>
+    <div class="body">
+      <div class="row"><h2>카우런</h2><span class="go">하러 가기</span></div>
+      <div class="desc">소고기가 되기 싫은 소! 장애물을 피해 농장을 탈출하세요.</div>
+      <div class="chips"><span>스와이프</span><span>한 판 1~3분</span><span>고기 등급 판정</span></div>
+      <div class="top" id="topCow"><svg class="medal" viewBox="0 0 24 24"><circle cx="12" cy="13" r="8" fill="#ffd21f" stroke="#c98a00" stroke-width="2"/><path d="M12 9v8" stroke="#c98a00" stroke-width="2.4" stroke-linecap="round"/></svg><span>랭킹 불러오는 중…</span></div>
+    </div>
+  </a>
+
+  <a class="game vo" href="virusothello/">
+    <div class="art">
+      <span class="tag">보드게임 · 두뇌</span>
+      <svg viewBox="0 0 220 140" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="ws" cx=".5" cy=".42" r=".6"><stop offset="0" stop-color="#fff"/><stop offset=".62" stop-color="#eef2f8"/><stop offset="1" stop-color="#c6d0df"/></radialGradient>
+          <radialGradient id="bs" cx=".5" cy=".42" r=".6"><stop offset="0" stop-color="#3d394f"/><stop offset=".62" stop-color="#17151f"/><stop offset="1" stop-color="#07060b"/></radialGradient>
+        </defs>
+        <rect x="20" y="96" width="180" height="34" rx="8" fill="#0f8577" stroke="#e9f1ff" stroke-width="3"/>
+        <g stroke="#0a5a50" stroke-width="2"><path d="M42.5 96v34M65 96v34M87.5 96v34M110 96v34M132.5 96v34M155 96v34M177.5 96v34M20 113h180"/></g>
+        <g transform="translate(52 60)"><circle r="33" fill="url(#ws)" stroke="#dfe6f0" stroke-width="3"/>
+          <g transform="translate(-20 -20)"><path d="M20 9 L30 12.5 V20 Q30 27.5 20 31.5 Q10 27.5 10 20 V12.5 Z" fill="#22b455" stroke="#128a3a" stroke-width="1.8" stroke-linejoin="round" transform="translate(20 20) scale(1.6) translate(-20 -20)"/><path d="M20 19.8 L15.4 14.5 M20 19.8 L24.6 14.5 M20 19.8 L20 25.1" stroke="#fff" stroke-width="3.4" stroke-linecap="round" fill="none" transform="translate(20 20) scale(1.6) translate(-20 -20)"/></g></g>
+        <text x="110" y="68" text-anchor="middle" font-family="Noto Sans KR,sans-serif" font-weight="900" font-size="20" fill="#8a93c2">VS</text>
+        <g transform="translate(168 60)"><circle r="33" fill="url(#bs)" stroke="#2d2a3d" stroke-width="3"/>
+          <g stroke="#b98cff" stroke-width="3" stroke-linecap="round"><path d="M0 -17v5M0 12v5M-17 0h5M12 0h5M-12 -12l3.6 3.6M8.4 8.4L12 12M12 -12l-3.6 3.6M-8.4 8.4L-12 12"/></g>
+          <circle r="8" fill="#8e5bff" stroke="#b98cff" stroke-width="2.4"/></g>
+      </svg>
+    </div>
+    <div class="body">
+      <div class="row"><h2><span>바이러스</span> 오델로</h2><span class="go">하러 가기</span></div>
+      <div class="desc">항체로 바이러스를 뒤집어라! 배치고사와 티어가 있는 오델로 게임이에요.</div>
+      <div class="chips"><span>로그인 필요</span><span>컴퓨터 대전</span><span>티어 · 챌린저</span></div>
+      <div class="top" id="topVo"><svg class="medal" viewBox="0 0 24 24"><circle cx="12" cy="13" r="8" fill="#ffd21f" stroke="#c98a00" stroke-width="2"/><path d="M12 9v8" stroke="#c98a00" stroke-width="2.4" stroke-linecap="round"/></svg><span>랭킹 불러오는 중…</span></div>
+    </div>
+  </a>
+
+  <div class="foot">게임은 계속 추가될 예정이에요.</div>
+</div>
+
+<script src="config.js"></script>
+<script>
+const C=window.COWRUN_CONFIG||{},DB=(C.databaseURL||'').replace(/\/+$/,'');
+const fmt=n=>Math.floor(n||0).toLocaleString('ko-KR');
+function setTop(id,html,link){const e=document.getElementById(id);e.querySelector('span').innerHTML=html;
+  if(link){const a=document.createElement('a');a.textContent='랭킹 보기';a.href=link;a.onclick=ev=>{ev.stopPropagation();};e.appendChild(a);}}
+async function get(path){const r=await fetch(DB+path);if(!r.ok)throw new Error(r.status);return r.json();}
+(async()=>{
+  if(!DB){setTop('topCow','지금 바로 도전해 보세요!');setTop('topVo','지금 바로 도전해 보세요!');return;}
+  try{const d=await get('/scores.json?orderBy=%22score%22&limitToLast=1');const r=d&&Object.values(d)[0];
+    setTop('topCow',r?`1위 <b>${r.name}</b> · ${fmt(r.score)}점`:'아직 1위가 없어요. 첫 기록을 남겨 보세요!','cowrun/ranking.html');}
+  catch(e){setTop('topCow','지금 바로 도전해 보세요!');}
+  try{const d=await get('/vo/players.json?orderBy=%22points%22&limitToLast=20');
+    const list=Object.keys(d||{}).map(id=>Object.assign({id},d[id])).filter(r=>r.placeN>=3).sort((a,b)=>b.points-a.points||(a.t||0)-(b.t||0));const r=list[0];
+    setTop('topVo',r?`1위 <b>${r.id}${r.name}</b> · ${fmt(r.points)}점`:'아직 1위가 없어요. 첫 챌린저가 되어 보세요!','virusothello/ranking.html');}
+  catch(e){setTop('topVo','지금 바로 도전해 보세요!');}
+})();
+</script>
+</body>
+</html>
